@@ -42,7 +42,7 @@ const sections: {
     description:
       "Every jar of Lake District Honey captures the flavours of the upland and lowland blossoms the Lowther bees pollinate – heather, hawthorn and dandelion being among their sources of nectar. When it comes to harvesting, the rules applied are rigorous. The honey is collected from one site, then bottled. There is no blending between batches.\nIt is because the Lake District Co. honeys can be traced to the precise area of land where the nectar is gathered that their authenticity and premium quality can be vouched for. Provenance in honey is everything.",
     imgUrl: honey,
-    imgDesc: "Beaver eating by a river",
+    imgDesc: "Honeycombe from a beehive",
     color: "bg-teal"
   },
 ];
