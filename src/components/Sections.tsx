@@ -53,7 +53,7 @@ const Sections = () => {
       {sections.map((section, i) => (
         <div
           className={cn(
-            "flex min-h-[640px]",
+            "flex h-[640px]",
             i % 2 === 0 ? "" : "flex-row-reverse",
             isMobile ? "flex-col-reverse w-screen" : ""
           )}
@@ -79,7 +79,6 @@ const Sections = () => {
             src={section.imgUrl}
             alt={section.imgDesc}
             className="md:w-1/2 object-cover"
-            loading="lazy"
           />
         </div>
       ))}
