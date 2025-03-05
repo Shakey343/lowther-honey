@@ -12,10 +12,11 @@ import lid2 from "./assets/lid-2.png";
 import lid3 from "./assets/lid-3.png";
 import lid4 from "./assets/lid-4.png";
 import Sections from "./components/Sections";
+import ShopCards from "./components/ShopCards";
 
 function App() {
   return (
-    <div className="h-screen">
+    <div className="h-screen bg-ghost">
       <div className="relative h-[600px] bg-[url(assets/banner.jpg)] bg-cover bg-no-repeat bg-center">
         <img
           src={lowtherLogo}
@@ -26,7 +27,7 @@ function App() {
         <Button className="absolute bottom-[100px] left-1/2 -translate-1/2">Get in touch</Button>
       </div>
       <div className="p-6 pb-12 md:p-20 md:pb-40">
-        <img src={ldhcLogo} alt="" />
+        <img src={ldhcLogo} alt="" className="mx-auto pb-10" />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <img src={jar1} alt="Spring Creamed Honey - Jar" />
           <img src={jar2} alt="Pure Heather Honey - Jar" />
@@ -41,6 +42,7 @@ function App() {
         </div>
       </div>
       <Sections />
+      <ShopCards />
     </div>
   );
 }
