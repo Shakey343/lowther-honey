@@ -39,7 +39,7 @@ const ShopCard = ({
         <Button
           className={cn(
             "h-fit py-3 px-5 group-hover:bg-yellow",
-            onlineShop ? "bg-pink group-hover:text-pink" : "bg-blue group-hover:text-blue"
+            onlineShop ? "bg-pink group-hover:text-pink hover:text-pink" : "bg-blue group-hover:text-blue"
           )}
         >
           {onlineShop ? "Buy online" : "Sold here"}
