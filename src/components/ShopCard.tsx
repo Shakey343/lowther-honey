@@ -5,33 +5,47 @@ const ShopCard = ({
   className,
   title,
   onlineShop,
-  image,
+  imgSrc,
+  imgAlt,
+  linkTo
 }: {
   className: string;
   title: string;
   onlineShop: boolean;
-  image: { src: string; alt: string };
+  imgSrc: string;
+  imgAlt: string;
+  linkTo: string;
 }) => {
   return (
-    <div className={cn("h-[400px] bg-amber-50 shadow-lg", className)}>
-      <img src={image.src} alt={image.alt} className="h-[300px] w-full object-cover" />
+    <a
+      className={cn(
+        "h-[400px] bg-amber-50 shadow-lg cursor-pointer group",
+        className
+      )}
+      href={linkTo}
+    >
+      <img
+        src={imgSrc}
+        alt={imgAlt}
+        className="h-[300px] w-full object-cover"
+      />
       <div
         className={cn(
           "h-[100px] w-full px-10 flex items-center justify-between",
           onlineShop ? "bg-pink" : "bg-blue"
         )}
       >
-        <p className="text-white">{title}</p>
+        <p className="text-yellow">{title}</p>
         <Button
           className={cn(
-            "h-fit py-3 px-5",
-            onlineShop ? "bg-pink hover:text-pink" : "bg-blue"
+            "h-fit py-3 px-5 group-hover:bg-yellow",
+            onlineShop ? "bg-pink group-hover:text-pink" : "bg-blue group-hover:text-blue"
           )}
         >
           {onlineShop ? "Buy online" : "Sold here"}
         </Button>
       </div>
-    </div>
+    </a>
   );
 };
 
