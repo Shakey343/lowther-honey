@@ -13,8 +13,21 @@ import lid3 from "./assets/lid-3.png";
 import lid4 from "./assets/lid-4.png";
 import Sections from "./components/Sections";
 import ShopCards from "./components/ShopCards";
+import Footer from "./components/Footer";
+import { useState } from "react";
+import Modal from "./components/Modal";
 
 function App() {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const openModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const closeModal = () => {
+    setIsModalVisible(false);
+  };
+
   return (
     <div className="h-screen bg-ghost">
       <div className="relative h-[500px] md:h-[600px] bg-[url('https://res.cloudinary.com/dcrdxjfgg/image/upload/v1741349269/Jim_and_the_beezles_anhiam.jpg')] bg-cover bg-no-repeat bg-bottom md:bg-center">
@@ -24,7 +37,7 @@ function App() {
           className="absolute left-1/2 -translate-x-1/2 top-[40px] drop-shadow"
           loading="eager"
         />
-        <Button className="absolute bottom-[60px] md:bottom-[100px] left-1/2 -translate-1/2">Get in touch</Button>
+        <Button className="absolute bottom-[60px] md:bottom-[100px] left-1/2 -translate-1/2" onClick={openModal}>Get in touch</Button>
       </div>
       <div className="p-6 pb-12 md:p-20 md:pb-40">
         <img src={ldhcLogo} alt="" className="mx-auto pb-10" />
@@ -43,6 +56,8 @@ function App() {
       </div>
       <Sections />
       <ShopCards />
+      <Modal isVisible={isModalVisible} onClose={closeModal} />
+      <Footer />
     </div>
   );
 }

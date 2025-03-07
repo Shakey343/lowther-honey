@@ -54,7 +54,7 @@ const Sections = () => {
           )}
           key={i}
         >
-          <div className={cn("md:w-1/2 py-[100px] px-[80px] text-gold flex flex-col justify-evenly", section.color)}>
+          <div className={cn("md:w-1/2 py-[100px] px-[80px] flex flex-col justify-evenly", section.color)}>
             <h3 className="text-[32px] font-bold tracking-wide underline underline-offset-8 decoration-garnet">
               {section.heading.toUpperCase()}
             </h3>

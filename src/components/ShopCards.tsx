@@ -35,11 +35,11 @@ const ShopCards = () => {
   }, []);
 
   return (
-    <div className="container mx-auto py-30">
+    <div className="container mx-auto md:py-30">
       <ShopCard
         className="w-full"
         title="Lowther Castle Shop"
-        onlineShop={true}
+        onlineShop={false}
         linkTo="https://lowthercastle.org/shop-2/"
         imgSrc="https://lowthercastle.org/wp-content/uploads/2024/04/New-Shop.jpg"
         imgAlt="Lowther castle"
