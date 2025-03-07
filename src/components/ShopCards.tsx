@@ -40,8 +40,8 @@ const ShopCards = () => {
         className="w-full"
         title="Lowther Castle Shop"
         onlineShop={true}
-        linkTo="https://www.lowther.co.uk/"
-        imgSrc="https://res.cloudinary.com/dcrdxjfgg/image/upload/v1741087977/Beaver_reredux_fmk9gd.png"
+        linkTo="https://lowthercastle.org/shop-2/"
+        imgSrc="https://lowthercastle.org/wp-content/uploads/2024/04/New-Shop.jpg"
         imgAlt="Lowther castle"
       />
       <div className="flex flex-wrap gap-10 mt-10">

@@ -17,14 +17,14 @@ import ShopCards from "./components/ShopCards";
 function App() {
   return (
     <div className="h-screen bg-ghost">
-      <div className="relative h-[600px] bg-[url(assets/banner.jpg)] bg-cover bg-no-repeat bg-center">
+      <div className="relative h-[500px] md:h-[600px] bg-[url('https://res.cloudinary.com/dcrdxjfgg/image/upload/v1741349269/Jim_and_the_beezles_anhiam.jpg')] bg-cover bg-no-repeat bg-bottom md:bg-center">
         <img
           src={lowtherLogo}
           alt="Lowther logo of the lowther dragon."
           className="absolute left-1/2 -translate-x-1/2 top-[40px] drop-shadow"
           loading="eager"
         />
-        <Button className="absolute bottom-[100px] left-1/2 -translate-1/2">Get in touch</Button>
+        <Button className="absolute bottom-[60px] md:bottom-[100px] left-1/2 -translate-1/2">Get in touch</Button>
       </div>
       <div className="p-6 pb-12 md:p-20 md:pb-40">
         <img src={ldhcLogo} alt="" className="mx-auto pb-10" />
