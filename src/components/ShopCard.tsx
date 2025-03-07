@@ -37,7 +37,7 @@ const ShopCard = ({
             onlineShop ? "bg-pink" : "bg-blue"
           )}
         >
-          <p className="text-yellow text-xl">{title}</p>
+          <p className="text-yellow text-2xl">{title}</p>
           <Button
             className={cn(
               "h-fit py-3 px-5 group-hover:bg-yellow",
