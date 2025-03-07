@@ -1,5 +1,6 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import lowtherLogo from "../assets/logo.svg";
 
 interface ModalProps {
   isVisible: boolean;
@@ -53,7 +54,8 @@ const Modal: React.FC<ModalProps> = ({ isVisible, onClose }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-night/50 z-50 text-yellow">
-      <div className="bg-teal p-10 rounded-sm shadow-lg w-full md:w-[40%] relative">
+      <div className="bg-teal p-10 rounded-sm shadow-lg w-full md:w-[60%] lg:w-[40%] relative">
+        <img src={lowtherLogo} alt="The Lowther Dragon Logo." className="absolute top-4 left-1/2 -translate-x-1/2 scale-75" />
         <button
           onClick={onClose}
           className="absolute right-4 top-6 px-6 py-2 font-sans font-bold text-yellow hover:text-yellow/80 transition-all ease cursor-pointer"
@@ -61,7 +63,7 @@ const Modal: React.FC<ModalProps> = ({ isVisible, onClose }) => {
         >
           X
         </button>
-        <h2 className="text-2xl font-bold mb-4">Get in touch</h2>
+        <h2 className="text-2xl font-bold mt-16 mb-4 text-center">Get in touch</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label htmlFor="name" className="block mb-1 font-medium">
@@ -73,7 +75,7 @@ const Modal: React.FC<ModalProps> = ({ isVisible, onClose }) => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full border p-2 bg-teal outline-pink-500"
+              className="w-full border p-2 bg-teal focus:outline-none"
               placeholder="Your name"
               required
             />
@@ -88,7 +90,7 @@ const Modal: React.FC<ModalProps> = ({ isVisible, onClose }) => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full border bg-teal p-2"
+              className="w-full border bg-teal p-2 focus:outline-none"
               placeholder="Your email"
               required
             />
@@ -105,7 +107,7 @@ const Modal: React.FC<ModalProps> = ({ isVisible, onClose }) => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full border bg-teal p-2"
+              className="w-full border bg-teal p-2 focus:outline-none"
               rows={4}
               placeholder="Your message"
               required
@@ -113,7 +115,7 @@ const Modal: React.FC<ModalProps> = ({ isVisible, onClose }) => {
           </div>
           <button
             type="submit"
-            className={`w-full p-2 text-ghost rounded cursor-pointer ${
+            className={`w-full p-2 text-teal rounded cursor-pointer font-bold ${
               isSending ? "bg-persian/20" : "bg-yellow/90 hover:bg-yellow"
             }`}
             disabled={isSending}
