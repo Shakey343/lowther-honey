@@ -7,7 +7,7 @@ const ShopCard = ({
   onlineShop,
   imgSrc,
   imgAlt,
-  linkTo
+  linkTo,
 }: {
   className: string;
   title: string;
@@ -23,27 +23,32 @@ const ShopCard = ({
         className
       )}
       href={linkTo}
+      target="_blank"
     >
-      <img
-        src={imgSrc}
-        alt={imgAlt}
-        className="h-[300px] w-full object-cover"
-      />
-      <div
-        className={cn(
-          "h-[100px] w-full px-10 flex items-center justify-between",
-          onlineShop ? "bg-pink" : "bg-blue"
-        )}
-      >
-        <p className="text-yellow">{title}</p>
-        <Button
+      <div className={cn("group-hover:ring-4 transition-all", onlineShop ? "ring-pink" : "ring-blue")}>
+        <img
+          src={imgSrc}
+          alt={imgAlt}
+          className="h-[300px] w-full object-cover"
+        />
+        <div
           className={cn(
-            "h-fit py-3 px-5 group-hover:bg-yellow",
-            onlineShop ? "bg-pink group-hover:text-pink hover:text-pink" : "bg-blue group-hover:text-blue"
+            "h-[100px] w-full px-10 flex items-center justify-between",
+            onlineShop ? "bg-pink" : "bg-blue"
           )}
         >
-          {onlineShop ? "Buy online" : "Sold here"}
-        </Button>
+          <p className="text-yellow text-xl">{title}</p>
+          <Button
+            className={cn(
+              "h-fit py-3 px-5 group-hover:bg-yellow",
+              onlineShop
+                ? "bg-pink group-hover:text-pink hover:text-pink"
+                : "bg-blue group-hover:text-blue"
+            )}
+          >
+            {onlineShop ? "Buy online" : "Sold here"}
+          </Button>
+        </div>
       </div>
     </a>
   );

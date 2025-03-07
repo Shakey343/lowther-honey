@@ -48,14 +48,14 @@ const Sections = () => {
       {sections.map((section, i) => (
         <div
           className={cn(
-            "flex h-[640px]",
+            "flex h-fit lg:h-[640px]",
             i % 2 === 0 ? "" : "flex-row-reverse",
             isMobile ? "flex-col-reverse w-screen h-fit" : ""
           )}
           key={i}
         >
           <div className={cn("md:w-1/2 py-[100px] px-[80px] flex flex-col justify-evenly", section.color)}>
-            <h3 className="text-[32px] font-bold tracking-wide underline underline-offset-8 decoration-garnet">
+            <h3 className="text-[32px] font-bold tracking-wide underline underline-offset-8 decoration-garnet mb-8">
               {section.heading.toUpperCase()}
             </h3>
             <div>

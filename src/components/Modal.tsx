@@ -113,7 +113,7 @@ const Modal: React.FC<ModalProps> = ({ isVisible, onClose }) => {
           </div>
           <button
             type="submit"
-            className={`w-full p-2 text-white rounded cursor-pointer ${
+            className={`w-full p-2 text-ghost rounded cursor-pointer ${
               isSending ? "bg-persian/20" : "bg-yellow/90 hover:bg-yellow"
             }`}
             disabled={isSending}

@@ -1,6 +1,7 @@
 import axios from "axios";
 import ShopCard from "./ShopCard";
 import { useEffect, useState } from "react";
+import cn from "../utils/cn";
 
 interface ImageData {
   public_id: string;
@@ -42,9 +43,14 @@ const ShopCards = () => {
         onlineShop={false}
         linkTo="https://lowthercastle.org/shop-2/"
         imgSrc="https://lowthercastle.org/wp-content/uploads/2024/04/New-Shop.jpg"
-        imgAlt="Lowther castle"
+        imgAlt="Lowther castle shop"
       />
-      <div className="flex flex-wrap gap-10 mt-10">
+      <div
+        className={cn(
+          "flex flex-wrap gap-10",
+          images.length > 0 ? "mt-10" : ""
+        )}
+      >
         {images.map((image) => (
           <ShopCard
             key={image.public_id}
